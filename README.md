@@ -25,7 +25,7 @@ client.user.marketingAccountTerm(self) #계정생성일자 (string)
 client.user.isNewbie(self) #뉴비여부 (bool)
 ```
 ### 채팅방기능
-room_id는 채팅방조회 해보면 '_id': '<id>' 있을텐대 그거임 
+room_id는 채팅방조회 해보면 "_id": "\<id\>" 있을텐대 그거임 
 
 아니면 본인 진행중인 채팅방 링크 보면 https://wrtn.ai/character/u/<캐릭터챗id>/c/<채팅방id> 이렇게 나올텐대 채팅방id 부분이다.
 ```py
