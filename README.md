@@ -6,7 +6,7 @@ pip install wrtn
 
 ## 사용방법
 ```py
-from wrtn import Wrtn
+pip install wrtn==1.1.1
 
 client = Wrtn(token='<TOKEN>')
 ```
