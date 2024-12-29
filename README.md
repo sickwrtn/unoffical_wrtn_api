@@ -21,7 +21,7 @@ Client.user.isNewbie(self) #뉴비여부 (bool)
 ```
 ### 채팅방기능
 ```py
-client.chat.all_chat_list(client) #유저의 모든 챗방 조회
+client.chat.all_chat_list(self) #유저의 모든 챗방 조회
 client.chat.chat_list(self,limit:int) #유저의 챗방을 limit개수만큼만 출력
 client.chat.send_chat(self,_id:str,message:str,isSuperMode:bool=False) #해당room_id의 챗방에 메시지 보낸 후 답변 출력
 ```
