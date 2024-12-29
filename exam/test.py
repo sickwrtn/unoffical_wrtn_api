@@ -1,10 +1,13 @@
 from wrtn import wrtn
 
-client = wrtn(token='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NTg3NDQ3ODBkYzEwMWQxMzY4ODUxNyIsImVtYWlsIjoic2lsbG8xNTQyNjVAZ21haWwuY29tIiwid3J0blVpZCI6IjhGZGJCcmg3OGFZLUdHS09NMGROTnpoTCIsImlzc3VlciI6IndydG4iLCJpYXQiOjE3MzU0ODk4NzksImV4cCI6MTczNTQ5MzQ3OX0.BHAK_eXGRqtzwRP0Bnx5SkRoltkhro0wokLf5lVw2I8')
+client = wrtn(token='<TOKEN>')
+
+print(client.user.nickname(client))
+
 data = {
             "name":"테스트7",
             "description":"테스트5",
-            "profileImageUrl":"https://d394jeh9729epj.cloudfront.net/8FdbBrh78aY-GGKOM0dNNzhL/c4a07e2b-e943-419f-bd95-04b50a5458e7.webp",
+            "profileImageUrl":"<이미지url>",
             "model":"sonnet",
             "initialMessages":["테스트5"],
             "characterDetails":"테스트5",
@@ -25,4 +28,5 @@ data = {
             }
             ]
         }
-print(client.charmaker.modify_char(client,data,char_id="sad"))
+
+print(client.charmaker.modify_char(client,data,char_id="6761541db6ecfa71fbf8e414"))

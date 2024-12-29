@@ -3,13 +3,14 @@ import requests
 import json
 
 class charmaker:
+    #챗봇제작
     def make_char(self,data :dict)->dict:
         '''
         :param data:
         {
             "name":"테스트4",
             "description":"테스트4",
-            "profileImageUrl":"https://d394jeh9729epj.cloudfront.net/8FdbBrh78aY-GGKOM0dNNzhL/테스트.jpeg",
+            "profileImageUrl":"<이미지url>",
             "model":"sonnet",
             "initialMessages":["테스트4"],
             "characterDetails":"테스트4",
@@ -33,13 +34,14 @@ class charmaker:
         if res.status_code != 201:
             raise Exception(res.status_code)
         return json.loads(res.text)
+    #챗봇수정
     def modify_char(self,data :dict,char_id :str)->dict:
         '''
         :param data:
         {
             "name":"테스트6",
             "description":"테스트5",
-            "profileImageUrl":"https://d394jeh9729epj.cloudfront.net/8FdbBrh78aY-GGKOM0dNNzhL/c4a07e2b-e943-419f-bd95-04b50a5458e7.webp",
+            "profileImageUrl":"<이미지url>",
             "model":"sonnet",
             "initialMessages":["테스트5"],
             "characterDetails":"테스트5",
@@ -61,5 +63,5 @@ class charmaker:
             ]
         }
         '''
-        res = requests.patch(f"{url}/be/characters/6771817bdf2a49612743188b", headers=self.cookie, json=data)
+        res = requests.patch(f"{url}/be/characters/{char_id}", headers=self.cookie, json=data)
         return json.loads(res.text)
