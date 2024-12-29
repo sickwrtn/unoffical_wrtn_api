@@ -27,6 +27,7 @@ room_id는 채팅방조회 해보면 '_id': '<id>' 있을텐대 그거임
 client.chat.all_chat_list(self) #유저의 모든 챗방 조회
 client.chat.chat_list(self,limit:int) #유저의 챗방을 limit개수만큼만 출력
 client.chat.send_chat(self,room_id:str,message:str,isSuperMode:bool=False) #해당room_id의 챗방에 메시지 보낸 후 답변 출력
+chat_log(self,room_id :str,limit:int) #해당room_id의 챗방에 있는 채팅내역을 limit개수 만큼 출력
 ```
 ### 피드조회
 ```py
