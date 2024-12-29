@@ -6,17 +6,20 @@ from wrtn import wrtn
 
 client = wrtn(token='<TOKEN>')
 ```
+[예제](https://github.com/sickwrtn/unoffical_wrtn_api/blob/main/exam/test.py) 한번 보고 사용해보는걸 추천
+
+Token찾는법은 크롬 개발자도구 열고 애플리케이션에 들어간 다음 cookies에 있는 access_token 을 가져오면 된다.
 
 ## 기능
 ### 유저정보조회
 ```py
-client.user.nickname(client) #유저 name (string)
-client.user.uid(client) #유저 uid (string)
-client.user._id(client) #유저 id (string)
-client.user.marketingAccountTerm(client) #계정생성일자 (string)
-Client.user.isNewbie(client) #뉴비여부 (bool)
+client.user.nickname(self) #유저 name (string)
+client.user.uid(self) #유저 uid (string)
+client.user._id(self) #유저 id (string)
+client.user.marketingAccountTerm(self) #계정생성일자 (string)
+Client.user.isNewbie(self) #뉴비여부 (bool)
 ```
-### 채팅방조회
+### 채팅방기능
 ```py
 client.chat.all_chat_list(client) #유저의 모든 챗방 조회
 client.chat.chat_list(self,limit:int) #유저의 챗방을 limit개수만큼만 출력
@@ -84,3 +87,5 @@ client.charmaker.modify_char(self,data :dict,char_id :str) #챗봇 수정
             ]
 }
 ```
+
+made by 뤼튼병자
