@@ -20,10 +20,12 @@ client.user.marketingAccountTerm(self) #계정생성일자 (string)
 Client.user.isNewbie(self) #뉴비여부 (bool)
 ```
 ### 채팅방기능
+room_id는 채팅방조회 해보면 '_id': '<id>' 있을텐대 그거임 
+아니면 본인 진행중인 채팅방 링크 보면 https://wrtn.ai/character/u/<캐릭터챗id>/c/<채팅방id> 이렇게 나올텐대 채팅방id 부분이다.
 ```py
 client.chat.all_chat_list(self) #유저의 모든 챗방 조회
 client.chat.chat_list(self,limit:int) #유저의 챗방을 limit개수만큼만 출력
-client.chat.send_chat(self,_id:str,message:str,isSuperMode:bool=False) #해당room_id의 챗방에 메시지 보낸 후 답변 출력
+client.chat.send_chat(self,room_id:str,message:str,isSuperMode:bool=False) #해당room_id의 챗방에 메시지 보낸 후 답변 출력
 ```
 ### 피드조회
 ```py
