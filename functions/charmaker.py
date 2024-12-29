@@ -4,7 +4,7 @@ import json
 
 class charmaker:
     #챗봇제작
-    def make_char(self,data :dict)->dict:
+    def make_char(self,data :dict,debug=False)->dict:
         '''
         :param data:
         {
@@ -31,11 +31,11 @@ class charmaker:
         }
         '''
         res = requests.post(f"{url}/be/characters",headers=self.cookie,json=data)
-        if res.status_code != 201:
+        if res.status_code != 201 and debug is False:
             raise Exception(res.status_code)
         return json.loads(res.text)
     #챗봇수정
-    def modify_char(self,data :dict,char_id :str)->dict:
+    def modify_char(self,data :dict,char_id :str,debug=False)->dict:
         '''
         :param data:
         {
@@ -64,4 +64,6 @@ class charmaker:
         }
         '''
         res = requests.patch(f"{url}/be/characters/{char_id}", headers=self.cookie, json=data)
+        if res.status_code != 201 and debug is False:
+            raise Exception(res.status_code)
         return json.loads(res.text)
