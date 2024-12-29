@@ -7,7 +7,7 @@ class wrtn:
     from functions.chat import chat
     #피드클레스
     from functions.feed import feed
-    #팻봇제작클레스
+    #챗봇제작클레스
     from functions.charmaker import charmaker
     def __init__(self,token:str):
         self.cookie = {f"Authorization": f"Bearer {token}"}
