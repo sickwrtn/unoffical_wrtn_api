@@ -17,7 +17,7 @@ client.user.nickname(self) #유저 name (string)
 client.user.uid(self) #유저 uid (string)
 client.user._id(self) #유저 id (string)
 client.user.marketingAccountTerm(self) #계정생성일자 (string)
-Client.user.isNewbie(self) #뉴비여부 (bool)
+client.user.isNewbie(self) #뉴비여부 (bool)
 ```
 ### 채팅방기능
 room_id는 채팅방조회 해보면 '_id': '<id>' 있을텐대 그거임 
