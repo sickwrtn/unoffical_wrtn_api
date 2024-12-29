@@ -24,5 +24,15 @@ class chat:
         if res_send.status_code != 201 and debug is False:
             raise Exception(res_send.status_code)
         json_res = json.loads(res_send.text)
-        res_recieve = requests.get(f"{url2}/terry/characters/chat/{room_id}/message/{json_res["data"]}",headers=self.cookie)
-        return res_recieve.text
+        res_recieve = requests.get(f"{url2}/terry/characters/chat/{room_id}/message/{json_res["data"]}",headers=self.cookie).text.split("\n\n")
+        output = ""
+        di = []
+        for i in res_recieve:
+            if i != "":
+                di.append(json.loads(i.replace("data: ", "")))
+        for i in di:
+            try:
+                output = output + i["chunk"]
+            except:
+                pass
+        return output
