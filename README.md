@@ -31,7 +31,7 @@ client.feed.ranking(self,limit:int,period="daily") #일간랭킹을 limit개수�
 client.charmaker.make_char(self,data :dict) #챗봇 제작
 client.charmaker.modify_char(self,data :dict,char_id :str) #챗봇 수정
 ```
-#### 챗봇 제작/수정을 위한 json form
+### 챗봇 제작/수정을 위한 json form
 제작
 ```py
 {
