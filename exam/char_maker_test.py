@@ -2,8 +2,6 @@ from wrtn import wrtn
 
 client = wrtn(token='<TOKEN>')
 
-print(client.user.nickname(client))
-
 data = {
             "name":"테스트7",
             "description":"테스트5",
