@@ -18,7 +18,7 @@ client.user._id(client) #유저 id (string)
 client.user.marketingAccountTerm(client) #계정생성일자 (string)
 Client.user.isNewbie(client) #뉴비여부 (bool)
 ```
-### 채팅방조회
+### 채팅방기능
 ```py
 client.chat.all_chat_list(client) #유저의 모든 챗방 조회
 client.chat.chat_list(self,limit:int) #유저의 챗방을 limit개수만큼만 출력
