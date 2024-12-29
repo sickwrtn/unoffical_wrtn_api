@@ -1,16 +1,21 @@
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=29&pause=1000&color=F7583A&center=true&width=435&lines=Unoffical+Wrtn+Api)](https://git.io/typing-svg)
+## wrtn 다운로드
+```
+pip install wrtn
+```
 
 ## 사용방법
 ```py
-from wrtn import wrtn
+from wrtn import Wrtn
 
-client = wrtn(token='<TOKEN>')
+client = Wrtn(token='<TOKEN>')
 ```
 [예제](https://github.com/sickwrtn/unoffical_wrtn_api/tree/main/exam) 한번 보고 사용해보는걸 추천
 
 Token찾는법은 크롬 개발자도구 열고 애플리케이션에 들어간 다음 cookies에 있는 access_token 을 가져오면 된다.
 
 ## 기능
+모든함수에 있는 debug 매개변수(bool)는 오류있을때 true하고 뭐가문제인지 확인할때 쓰면 편함
 ### 유저정보조회
 ```py
 client.user.nickname(self) #유저 name (string)
