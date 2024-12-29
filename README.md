@@ -1,10 +1,14 @@
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=29&pause=1000&color=F7583A&center=true&width=435&lines=Unoffical+Wrtn+Api)](https://git.io/typing-svg)
+## wrtn 다운로드
+```
+pip install wrtn
+```
 
 ## 사용방법
 ```py
-from wrtn import wrtn
+from wrtn import Wrtn
 
-client = wrtn(token='<TOKEN>')
+client = Wrtn(token='<TOKEN>')
 ```
 [예제](https://github.com/sickwrtn/unoffical_wrtn_api/tree/main/exam) 한번 보고 사용해보는걸 추천
 
