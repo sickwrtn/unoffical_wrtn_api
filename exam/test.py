@@ -1,0 +1,4 @@
+from wrtn import wrtn
+
+client = wrtn(token='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NTg3NDQ3ODBkYzEwMWQxMzY4ODUxNyIsImVtYWlsIjoic2lsbG8xNTQyNjVAZ21haWwuY29tIiwid3J0blVpZCI6IjhGZGJCcmg3OGFZLUdHS09NMGROTnpoTCIsImlzc3VlciI6IndydG4iLCJpYXQiOjE3MzU0ODUyNzUsImV4cCI6MTczNTQ4ODg3NX0.L65JAzrsaLPZLRg3OdEnxIj4JLjalS5IB_HHTVfK8LY')
+print(client.user.isNewbie(wrtn))
