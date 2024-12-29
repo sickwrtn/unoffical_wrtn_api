@@ -6,3 +6,10 @@ from wrtn import wrtn
 
 client = wrtn(token='<TOKEN>')
 ```
+
+## 기능
+
+### 유저정보조회
+```py
+client.user.nickname(client) #유저이름출력
+```
