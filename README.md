@@ -7,6 +7,8 @@ from wrtn import wrtn
 client = wrtn(token='<TOKEN>')
 ```
 
+Token찾는법은 크롬 개발자도구 열고 애플리케이션에 들어간 다음 cookies에 있는 access_token 을 가져오면 된다.
+
 ## 기능
 ### 유저정보조회
 ```py
