@@ -6,7 +6,7 @@ from wrtn import wrtn
 
 client = wrtn(token='<TOKEN>')
 ```
-
+[예제](https://github.com/sickwrtn/unoffical_wrtn_api/blob/main/exam/test.py) 한번 보고 사용해보는걸 추천
 Token찾는법은 크롬 개발자도구 열고 애플리케이션에 들어간 다음 cookies에 있는 access_token 을 가져오면 된다.
 
 ## 기능
