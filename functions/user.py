@@ -3,6 +3,11 @@ import requests
 import json
 
 class user:
+    def direct_info(self):
+        res = requests.put(f"{url}/be/user", headers=self.cookie)
+        if res.status_code != 200:
+            raise Exception(res.status_code)
+        return json.loads(res.text)
     def nickname(self):
         res = requests.put(f"{url}/be/user", headers=self.cookie)
         if res.status_code != 200:
