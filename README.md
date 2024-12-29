@@ -12,11 +12,11 @@ Token찾는법은 크롬 개발자도구 열고 애플리케이션에 들어간 
 ## 기능
 ### 유저정보조회
 ```py
-client.user.nickname(client) #유저 name (string)
-client.user.uid(client) #유저 uid (string)
-client.user._id(client) #유저 id (string)
-client.user.marketingAccountTerm(client) #계정생성일자 (string)
-Client.user.isNewbie(client) #뉴비여부 (bool)
+client.user.nickname(self) #유저 name (string)
+client.user.uid(self) #유저 uid (string)
+client.user._id(self) #유저 id (string)
+client.user.marketingAccountTerm(self) #계정생성일자 (string)
+Client.user.isNewbie(self) #뉴비여부 (bool)
 ```
 ### 채팅방기능
 ```py
