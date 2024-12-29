@@ -86,3 +86,5 @@ client.charmaker.modify_char(self,data :dict,char_id :str) #챗봇 수정
             ]
 }
 ```
+
+made by 뤼튼병자
