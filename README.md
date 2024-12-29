@@ -11,5 +11,10 @@ client = wrtn(token='<TOKEN>')
 
 ### 유저정보조회
 ```py
-client.user.nickname(client) #유저이름출력
+client.user.nickname(client) #유저 name (string)
+client.user.uid(client) #유저 uid (string)
+client.user._id(client) #유저 id (string)
+client.user.marketingAccountTerm(client) #계정생성일자 (string)
+Client.user.isNewbie(client) #뉴비여부 (boolean)
 ```
+----
