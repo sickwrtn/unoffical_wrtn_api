@@ -1,4 +1,4 @@
-# [![Typing SVG](https://readme-typing-svg.demolab.com/?lines=Unoffical+Wrtn_Api;Second+line+of+text)](https://git.io/typing-svg)
+# [![Typing SVG](https://readme-typing-svg.demolab.com/?lines=Unoffical+Wrtn Api;Second+line+of+text)](https://git.io/typing-svg)
 
 ## 사용방법
 ```py
