@@ -15,6 +15,8 @@ class user:
             raise Exception(res.status_code)
         return json.loads(res.text)['data']
 
+    def get_character_chat_profiles(self)->dict: pass
+
     def nickname(self,debug=False)->str:
         '''유저이름을 가져옴
         :param debug: response 출력 여부

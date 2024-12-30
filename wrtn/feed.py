@@ -38,3 +38,15 @@ class feed:
         if res.status_code != 200 and debug is False:
             raise Exception(res.status_code)
         return json.loads(res.text)['data']
+
+    def characters_similar(self,characterId:str,debug=False)->dict:
+        '''
+
+        :param characterId: 조회하려는 캐릭터챗 Id
+        :param debug: response 출력 여부
+        :return: 유사순 캐릭터챗 return
+        '''
+        res = requests.get(f"{url}/be/character-recommendations/similar?characterId={characterId}", headers=self.cookie)
+        if res.status_code != 200 and debug is False:
+            raise Exception(res.status_code)
+        return json.loads(res.text)['data']

@@ -6,7 +6,7 @@ with open('README.md', encoding='utf-8') as f:
 
 setup(
   name='wrtn', # 등록할 패키지 이름 (PyPI에 등록되는 이름)
-  version='1.2.0', # 패키지 버전
+  version='1.2.1', # 패키지 버전
   description='unoffical wrtn api', # 패키지의 짧은 설명
   long_description=long_description, # 패키지의 상세 설명
   long_description_content_type = 'text/markdown', # long_description의 형식

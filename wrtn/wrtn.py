@@ -1,6 +1,5 @@
 import requests
 
-
 #메인 클레스
 class Wrtn:
     # 유저정보클레스
@@ -29,3 +28,6 @@ class Wrtn:
         '''
         self.access_Token, self.accessTokenExpiredAt = self.refresh_token(refresh_token)
         self.cookie = {f"Authorization": f"Bearer {self.access_Token}"}
+        self.DAILY = "daily"
+        self.WEEKLY = "weekly"
+        self.MONTHLY = "monthly"
