@@ -2,12 +2,12 @@ from .variable import *
 import requests
 import json
 
+#챗봇제작 클레스
+
 class charmaker:
-    #챗봇제작
     def make_char(self,data :dict,debug=False)->dict:
-        '''
-        :param data:
-        {
+        '''챗봇만들기
+        :param data: {
             "name":"테스트4",
             "description":"테스트4",
             "profileImageUrl":"<이미지url>",
@@ -29,16 +29,16 @@ class charmaker:
             ],
             "isAdult":false
         }
+        :return: 성공여부와 echo를 return
         '''
         res = requests.post(f"{url}/be/characters",headers=self.cookie,json=data)
         if res.status_code != 201 and debug is False:
             raise Exception(res.status_code)
         return json.loads(res.text)
-    #챗봇수정
+
     def modify_char(self,data :dict,char_id :str,debug=False)->dict:
-        '''
-        :param data:
-        {
+        '''챗봇수정
+        :param data: {
             "name":"테스트6",
             "description":"테스트5",
             "profileImageUrl":"<이미지url>",
@@ -62,6 +62,7 @@ class charmaker:
             }
             ]
         }
+        :return: 성공여부와 echo를 retur
         '''
         res = requests.patch(f"{url}/be/characters/{char_id}", headers=self.cookie, json=data)
         if res.status_code != 201 and debug is False:
