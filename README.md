@@ -8,11 +8,11 @@ pip install wrtn==1.1.2
 ```py
 from wrtn import Wrtn
 
-client = Wrtn(token='<TOKEN>')
+client = Wrtn(refresh_token='<refresh_TOKEN>')
 ```
 [예제](https://github.com/sickwrtn/unoffical_wrtn_api/tree/main/wrtn/exam) 한번 보고 사용해보는걸 추천
 
-Token찾는법은 크롬 개발자도구 열고 애플리케이션에 들어간 다음 cookies에 있는 access_token 을 가져오면 된다.
+refresh Token찾는법은 크롬 개발자도구 열고 애플리케이션에 들어간 다음 cookies에 있는 refresh_token 을 가져오면 된다.
 
 ## 기능
 모든함수에 있는 debug 매개변수(bool)는 오류있을때 true하고 뭐가문제인지 확인할때 쓰면 편함
@@ -95,6 +95,11 @@ client.charmaker.modify_char(self,data :dict,char_id :str) #챗봇 수정
             }
             ]
 }
+```
+## 1.1.3패치노트
+```
+refresh token 기능 추가
+wrtn.py 주석 추가
 ```
 ## 1.1.2패치노트
 ```
