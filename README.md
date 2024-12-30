@@ -1,7 +1,7 @@
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=50&pause=1000&color=F7583A&center=true&height=100&width=800&lines=Unoffical+Wrtn+Api+1.1.4v)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=50&pause=1000&color=F7583A&center=true&height=100&width=800&lines=Unoffical+Wrtn+Api+1.2.0v)](https://git.io/typing-svg)
 ## wrtn 다운로드
 ```
-pip install wrtn==1.1.4
+pip install wrtn==1.2.0
 ```
 
 ## 사용방법
@@ -36,7 +36,9 @@ client.chat.chat_log(self,room_id :str,limit:int) #해당room_id의 챗방에 �
 ```
 ### 피드조회
 ```py
-client.feed.ranking(self,limit:int,period="daily") #일간랭킹을 limit개수만큼출력 period는 daily, monthly 있음 (순위순)
+client.feed.ranking(self,limit:int,period="daily") #일간랭킹을 limit개수만큼출력 period는 daily,weekly, monthly 있음 (순위순)
+characters_sorted_by_likeCount(self,limit:int,debug=False) #좋아요개수순으로 캐릭터를 limit 개수만큼 불러오기
+characters_me_liked(self,limit:int,debug=False) #최신순으로 내가 좋아요를 표시한 캐릭터를 limit 개수만큼 가져오기
 ```
 ### 챗봇제작
 ```py
@@ -97,6 +99,14 @@ client.charmaker.modify_char(self,data :dict,char_id :str) #챗봇 수정
 }
 ```
 # 패치노트
+## 1.2.0
+```
+feed 기능 추가
+- characters_sorted_by_likeCount
+- characters_me_liked
+- ranking period=weekly 추가
+json return시 data부분만 return 하도록 수정
+```
 ## 1.1.4
 ```
 wrtn.py refresh_token함수 예외처리
