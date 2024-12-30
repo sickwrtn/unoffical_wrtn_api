@@ -13,7 +13,7 @@ class chat:
         res = requests.get(f"{url}/be/api/v2/chat", headers=self.cookie)
         if res.status_code != 200 and debug is False:
             raise Exception(res.status_code)
-        return json.loads(res.text)
+        return json.loads(res.text)['data']
 
     def chat_list(self,limit:int,debug=False)->dict:
         '''채팅방의 리스트를 limit 개수만큼 출력합니다.
@@ -24,7 +24,7 @@ class chat:
         res = requests.get(f"{url}/be/api/v2/chat?type=character&limit={limit}", headers=self.cookie)
         if res.status_code != 200 and debug is False:
             raise Exception(res.status_code)
-        return json.loads(res.text)
+        return json.loads(res.text)['data']
     def chat_log(self,room_id :str,limit:int,debug=False)->dict:
         '''해당하는 room_id의 채팅방의 채팅내역을 출력합니다.
         :param room_id: 채팅방의 id (ex. 67714607f21ad8d290923bb0)
@@ -35,7 +35,7 @@ class chat:
         res = requests.get(f"{url2}/terry/api/v2/chat-room/{room_id}/messages?limit={limit}", headers=self.cookie)
         if res.status_code != 200 and debug is False:
             raise Exception(res.status_code)
-        return json.loads(res.text)
+        return json.loads(res.text)['data']
     def send(self,room_id:str,message:str,isSuperMode:bool=False,debug=False)->str:
         ''' 채팅을 보낸후 응답결과를 받습니다
         :param room_id: 채팅방의 id (ex. 67714607f21ad8d290923bb0)

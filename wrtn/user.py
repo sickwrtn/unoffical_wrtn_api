@@ -13,7 +13,7 @@ class user:
         res = requests.put(f"{url}/be/user", headers=self.cookie)
         if res.status_code != 200 and debug is False:
             raise Exception(res.status_code)
-        return json.loads(res.text)
+        return json.loads(res.text)['data']
 
     def nickname(self,debug=False)->str:
         '''유저이름을 가져옴
