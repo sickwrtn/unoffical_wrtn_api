@@ -1,4 +1,4 @@
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=50&pause=1000&color=F7583A&center=true&height=200&width=600&lines=Unoffical+Wrtn+Api+1.1.4v)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=50&pause=1000&color=F7583A&center=true&height=100&width=600&lines=Unoffical+Wrtn+Api+1.1.4v)](https://git.io/typing-svg)
 ## wrtn 다운로드
 ```
 pip install wrtn==1.1.4
