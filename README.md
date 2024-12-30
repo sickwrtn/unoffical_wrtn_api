@@ -117,6 +117,7 @@ feed 기능 추가
 - characters_me_liked
 - ranking period=weekly 추가
 json return시 data부분만 return 하도록 수정
+Readme.md 가독성 수정
 ```
 ## 1.1.4
 ```
