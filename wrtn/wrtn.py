@@ -17,10 +17,12 @@ class Wrtn:
         :return: access_token, accessTokenExpiredAt 타입 str
         '''
         res = requests.post(url="https://api.wow.wrtn.ai/auth/refresh",headers={"Refresh":refresh_token})
-        res = res.json()
-        if res['result'] != "SUCCESS":
+        res_json = res.json()
+        if res.status_code != 201:
+            raise Exception(res.status_code)
+        if res_json['result'] != "SUCCESS":
             raise Exception("Failed to refresh token")
-        return res['data']['accessToken'],res['data']['accessTokenExpiredAt']
+        return res_json['data']['accessToken'],res_json['data']['accessTokenExpiredAt']
     def __init__(self,refresh_token:str)->None:
         '''refresh token 및 쿠키지정
         :param refresh_token: refresh_token 타입 str
