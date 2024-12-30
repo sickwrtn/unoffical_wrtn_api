@@ -97,9 +97,9 @@ client.charmaker.modify_char(self,data :dict,char_id :str) #챗봇 수정
 }
 ```
 ## 1.1.2패치노트
-'''
+```
 주석 추가
 chat.send_chat -> chat.send 함수 이름변경
 chat.send 예외처리
-'''
+```
 made by 뤼튼병자
