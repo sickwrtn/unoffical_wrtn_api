@@ -1,6 +1,6 @@
 from wrtn import Wrtn
 
-client = Wrtn(token='<TOKEN>')
+client = Wrtn(refresh_token='<refresh_TOKEN>')
 
 data = {
             "name":"테스트7",

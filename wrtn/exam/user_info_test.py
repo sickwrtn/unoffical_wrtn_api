@@ -1,6 +1,6 @@
 from wrtn import Wrtn
 
-client = Wrtn(token='<TOKEN>')
+client = Wrtn(refresh_token='<refresh_TOKEN>')
 
 print(client.user.nickname(client))
 print(client.user.uid(client))
