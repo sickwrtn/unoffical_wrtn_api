@@ -1,5 +1,0 @@
-from wrtn import *
-
-client = Wrtn(refresh_token='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NTg3NDQ3ODBkYzEwMWQxMzY4ODUxNyIsIndydG5VaWQiOiI4RmRiQnJoNzhhWS1HR0tPTTBkTk56aEwiLCJpc3N1ZXIiOiJ3cnRuIiwiaWF0IjoxNzM1NDczNDU0LCJleHAiOjE3MzY2ODMwNTR9.I2LjOq9QYyFeRHJTEWa_73tPQsrjjMS0_VD4kqqpOks')
-
-print(client.user.nickname(client))
