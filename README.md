@@ -1,7 +1,7 @@
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=50&pause=1000&color=F7583A&center=true&height=100&width=800&lines=Unoffical+Wrtn+Api+1.1.4v)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=50&pause=1000&color=F7583A&center=true&height=100&width=800&lines=Unoffical+Wrtn+Api+1.2.0v)](https://git.io/typing-svg)
 ## wrtn 다운로드
 ```
-pip install wrtn==1.1.4
+pip install wrtn==1.2.0
 ```
 
 ## 사용방법
@@ -16,31 +16,44 @@ refresh Token찾는법은 크롬 개발자도구 열고 애플리케이션에 �
 
 ## 기능
 모든함수에 있는 debug 매개변수(bool)는 오류있을때 true하고 뭐가문제인지 확인할때 쓰면 편함
-### 유저정보조회
+### 유저정보조회(client.user)
 ```py
 client.user.nickname(self) #유저 name (string)
+
 client.user.uid(self) #유저 uid (string)
+
 client.user._id(self) #유저 id (string)
+
 client.user.marketingAccountTerm(self) #계정생성일자 (string)
+
 client.user.isNewbie(self) #뉴비여부 (bool)
 ```
-### 채팅방기능
+### 채팅방기능(client.chat)
 room_id는 채팅방조회 해보면 "_id": "\<id\>" 있을텐대 그거임 
 
 아니면 본인 진행중인 채팅방 링크 보면 https://wrtn.ai/character/u/<캐릭터챗id>/c/<채팅방id> 이렇게 나올텐대 채팅방id 부분이다.
 ```py
 client.chat.all_chat_list(self) #유저의 모든 챗방 조회
+
 client.chat.chat_list(self,limit:int) #유저의 챗방을 limit개수만큼만 출력
+
 client.chat.send(self,room_id:str,message:str,isSuperMode:bool=False) #해당room_id의 챗방에 메시지 보낸 후 답변 출력
+
 client.chat.chat_log(self,room_id :str,limit:int) #해당room_id의 챗방에 있는 채팅내역을 limit개수 만큼 출력
 ```
-### 피드조회
+### 피드조회(client.feed)
 ```py
-client.feed.ranking(self,limit:int,period="daily") #일간랭킹을 limit개수만큼출력 period는 daily, monthly 있음 (순위순)
+client.feed.ranking(self,limit:int,period="daily") #일간랭킹을 limit개수만큼출력 period는 daily,weekly, monthly 있음 (순위순)
+
+characters_sorted_by_likeCount(self,limit:int,debug=False) #좋아요개수순으로 캐릭터를 limit 개수만큼 불러오기
+
+characters_me_liked(self,limit:int,debug=False) #최신순으로 내가 좋아요를 표시한 캐릭터를 limit 개수만큼 가져오기
+
 ```
-### 챗봇제작
+### 챗봇제작(client.charmaker)
 ```py
 client.charmaker.make_char(self,data :dict) #챗봇 제작
+
 client.charmaker.modify_char(self,data :dict,char_id :str) #챗봇 수정
 ```
 ### 챗봇 제작/수정을 위한 json form
@@ -97,6 +110,15 @@ client.charmaker.modify_char(self,data :dict,char_id :str) #챗봇 수정
 }
 ```
 # 패치노트
+## 1.2.0
+```
+feed 기능 추가
+- characters_sorted_by_likeCount
+- characters_me_liked
+- ranking period=weekly 추가
+json return시 data부분만 return 하도록 수정
+Readme.md 가독성 수정
+```
 ## 1.1.4
 ```
 wrtn.py refresh_token함수 예외처리
