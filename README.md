@@ -1,7 +1,7 @@
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=29&pause=1000&color=F7583A&center=true&width=435&lines=Unoffical+Wrtn+Api)](https://git.io/typing-svg)
 ## wrtn 다운로드
 ```
-pip install wrtn==1.1.3
+pip install wrtn==1.1.4
 ```
 
 ## 사용방법
@@ -96,12 +96,17 @@ client.charmaker.modify_char(self,data :dict,char_id :str) #챗봇 수정
             ]
 }
 ```
-## 1.1.3패치노트
+# 패치노트
+## 1.1.4
+```
+wrtn.py refresh_token함수 예외처리
+```
+## 1.1.3
 ```
 refresh token 기능 추가
 wrtn.py 주석 추가
 ```
-## 1.1.2패치노트
+## 1.1.2
 ```
 주석 추가
 chat.send_chat -> chat.send 함수 이름변경
