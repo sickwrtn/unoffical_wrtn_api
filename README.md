@@ -49,7 +49,7 @@ characters_sorted_by_likeCount(self,limit:int,debug=False) #좋아요개수순�
 
 characters_me_liked(self,limit:int,debug=False) #최신순으로 내가 좋아요를 표시한 캐릭터를 limit 개수만큼 가져오기
 
-characters_similar(self,characterId:str,debug=False) #특정 캐릭터와 유사한 캐릭터를 보여줌
+characters_similar(self,characterId:str,debug=False) #특정 캐릭터와 유사한 캐릭터를 가져옴
 ```
 ### 챗봇제작(client.charmaker)
 ```py
