@@ -5,4 +5,4 @@ from .charmaker import *
 from .variable import*
 from .wrtn import *
 
-__version__ = '1.2.1'
+__version__ = '1.2.2'

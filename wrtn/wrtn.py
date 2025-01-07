@@ -15,7 +15,7 @@ class Wrtn:
         :param refresh_token: refresh token 타입 str
         :return: access_token, accessTokenExpiredAt 타입 str
         '''
-        res = requests.post(url="https://api.wow.wrtn.ai/auth/refresh",headers={"Refresh":refresh_token})
+        res = requests.post(url="https://api.wow.wrtn.ai/auth/refresh",headers={"Refresh":refresh_token,"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"})
         res_json = res.json()
         if res.status_code != 201:
             raise Exception(res.status_code)
@@ -27,7 +27,8 @@ class Wrtn:
         :param refresh_token: refresh_token 타입 str
         '''
         self.access_Token, self.accessTokenExpiredAt = self.refresh_token(refresh_token)
-        self.cookie = {f"Authorization": f"Bearer {self.access_Token}"}
+        self.cookie = {"Authorization": f"Bearer {self.access_Token}",
+                       "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"}
         self.DAILY = "daily"
         self.WEEKLY = "weekly"
         self.MONTHLY = "monthly"
