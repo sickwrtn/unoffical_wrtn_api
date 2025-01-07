@@ -1,7 +1,7 @@
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=50&pause=1000&color=F7583A&center=true&height=100&width=800&lines=Unoffical+Wrtn+Api+1.2.1v)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=50&pause=1000&color=F7583A&center=true&height=100&width=800&lines=Unoffical+Wrtn+Api+1.2.2v)](https://git.io/typing-svg)
 ## wrtn 다운로드
 ```
-pip install wrtn==1.2.1
+pip install wrtn==1.2.2
 ```
 
 ## 사용방법
@@ -111,6 +111,12 @@ client.charmaker.modify_char(self,data :dict,char_id :str) #챗봇 수정
 }
 ```
 # 패치노트
+## 1.2.2
+```
+기존 python requests User-Agent가 차단되어서 
+Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
+로 User-Agent 추가
+```
 ## 1.2.1
 ```
 feed 기능 추가
